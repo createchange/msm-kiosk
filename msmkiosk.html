@@ -1,0 +1,64 @@
+<!-- The code below is the JavaScript Code in the HEAD of this document that works the drop down menu-->
+<head> 
+	<title> MSM Kiosk </title>
+</head>
+
+	<script type="text/javascript">
+		
+		<!--//
+
+function goToPage763(mySelect)
+{
+	PageIndex2=mySelect.selectedIndex;
+	{
+		if
+		(
+		mySelect.options[PageIndex2].value != "none"
+			)
+		{
+			//this is the key code in the JavaScript to open the new page in
+			//the iframe:-
+			frames['iframe2'].location.href = mySelect.options[PageIndex2].value;
+		}
+	}
+}
+//-->
+	</script>
+	<center>
+	<form name="form763">
+		<p>
+		<select name="select763" size="1" onchange="goToPage763(this.form.select763)">
+			<option value="index.html" selected="selected">
+			Homepage
+			</option>
+			<option value="https://www.google.com">
+			Google	
+			</option>
+			<option value="https://bamboohr.com">
+			MSM HRIS
+			</option>
+			<option value="https://outlook.office.comcom/">
+			MSM eMail
+			</option>
+			<option value="https://paychecks.intuit.com/">
+			MSM View My Paycheck
+			</option>
+			<option value="https://google.com">
+			MSM CRM
+			</option>
+			<option value="https://google.com">
+			MSM Scripts
+			</option>
+			<option value="https://google.com">
+			MSM Sales Board	
+			</option>
+		</select>
+		</p>
+		<p>
+		<!-- The code below is the code in the body of this document that writes the form-->
+		<iframe name="iframe2" src="index.html" frameBorder="3" align="top" height="92%" width="100%" hspace="0" vspace="0" align="middle">
+			If you can see this, your browser does not support iframes!
+		</iframe>
+		</p>
+	</form>
+	</center>
